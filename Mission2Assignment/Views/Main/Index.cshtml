@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -8,7 +14,7 @@
     <link href="css/default.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Ben Schneider</h1> 
+    <h1>Ben Schneider</h1>
     <img src="img/running.jpg" height="300" />
     <p>
         I hope that I can become a better developer by taking IS 413. I really enjoyed VBA in 201,
@@ -26,15 +32,22 @@
     </ul>
 
     <h2>Grade calculator:</h2>
-    <label>Assignments (enter average grade received on assignments):</label>
-    <input id="txtAssignment" /><br />
-    <label>Group Project (enter grade received on group project):</label>
-    <input id="txtGroup" /><br />
-    <label>Quizzes (enter average grade received on quizzes):</label>
-    <input id="txtQuiz" /><br />
-    <label>Exams (enter average grade received on exams):</label>
-    <input id="txtExam" /><br />
-    <label>INTEX (enter grade received on INTEX):</label>
-    <input id="txtINTEX" /><br />
+    <form>
+        <label>Assignments (enter average grade received on assignments):</label>
+        <input id="txtAssignment" /><br />
+        <label>Group Project (enter grade received on group project):</label>
+        <input id="txtGroup" /><br />
+        <label>Quizzes (enter average grade received on quizzes):</label>
+        <input id="txtQuiz" /><br />
+        <label>Exams (enter average grade received on exams):</label>
+        <input id="txtExam" /><br />
+        <label>INTEX (enter grade received on INTEX):</label>
+        <input id="txtINTEX" /><br />
+        <input id="calc" type="button" value="Calculate" />
+    </form>
+
+    <script src="lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="js/gradeCalc.js"></script>
+
 </body>
 </html>
