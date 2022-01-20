@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @* These is the razor code for the index page so that it dynamically displays a unique value
+        for the Title and Header. *@
+
+    ViewData["Title"] = "Grade Calculation";
+    ViewData["Header"] = "Grade Calculator: ";
+}
+
+@*This line connects our inputs to the model in our app.*@
+@model GradeCalcModel;
+
+
+@* Here is a form with a number of input boxes that allow a user to enter values for 
+    the average grade received on each type of assignment in IS 413. It then outputs a value 
+    in an alert box that displays the class grade as a percentage and a letter grade. *@
+<form method="post">
+    <label>Assignments (enter average grade received on assignments):</label>
+    <input id="txtAssignment" asp-for="Assignment"/><br />
+    <label>Group Project (enter grade received on group project):</label>
+    <input id="txtGroup" asp-for="Group"/><br />
+    <label>Quizzes (enter average grade received on quizzes):</label>
+    <input id="txtQuiz" asp-for="Quiz"/><br />
+    <label>Exams (enter average grade received on exams):</label>
+    <input id="txtExam" asp-for="Exam"/><br />
+    <label>INTEX (enter grade received on INTEX):</label>
+    <input id="txtINTEX" asp-for="INTEX"/><br />
+    <input id="calc" type="submit" value="Calculate" />
+
+    <div asp-validation-summary="All"></div>
+</form>
+
+@* This accesses a javascript file that runs the javascript code necessary to do these calculations. *@
+<script src="~/js/gradeCalc.js"></script>

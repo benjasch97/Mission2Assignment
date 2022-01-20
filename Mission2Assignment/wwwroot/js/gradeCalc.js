@@ -1,8 +1,11 @@
 ﻿$("#calc").click(function () {
 
+
+    // calculates the percent score based on the inputs from the GradeCalc form view page
     percent = Math.round(($("#txtAssignment").val() * 0.55) + ($("#txtGroup").val() * 0.05) + ($("#txtQuiz").val() * 0.1) +
         ($("#txtExam").val() * 0.2) + ($("#txtINTEX").val() * 0.1));
 
+    // determines the letter grade based on the percent grade
     if (percent > 93) {
         letter = 'A'
     } else if (percent > 89) {
@@ -29,5 +32,6 @@
         letter = 'F'
     }
 
+    // outputs the final grade percentage and letter grade in an alert box
     alert("Final grade percentage: " + percent + "%." + "\nFinal letter grade: " + letter + ".");
 })

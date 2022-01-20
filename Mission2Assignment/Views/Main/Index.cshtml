@@ -2,52 +2,28 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    @* These is the razor code for the index page so that it dynamically displays a unique value
+        for the Title and Header. *@
+
+    ViewData["Title"] = "Ben's first MVC Site";
+    ViewData["Header"] = "Ben Schneider";
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Ben's ASP.net site</title>
-    <link rel="icon" href="img/Profile Picture.ico" />
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/default.css" rel="stylesheet" />
-</head>
-<body>
-    <h1>Ben Schneider</h1>
-    <img src="img/running.jpg" height="300" />
-    <p>
-        I hope that I can become a better developer by taking IS 413. I really enjoyed VBA in 201,
-        and I liked doing Python 403, but I didn't feel like I understood it very well. I hope that I can get good at
-        and also enjoy web development to potentially get a job in web dev later. The tricky part of 403 for me was the django stuff.
-        I didn't put as much time into it as I should have, so I'm excited and hopeful that the mechanics of creating a website
-        will be more intuitive and simple than Django.
-    </p>
+@* Here's the awesome picture of when I ran a 5k with my friends. *@
+<img src="img/running.jpg" height="300" />
 
-    <p>My top 3 jobs I would like to pursue after college:</p>
-    <ul>
-        <li>Software Engineer</li>
-        <li>Cyber Security Engineer</li>
-        <li>Data Analyst</li>
-    </ul>
+@* Here are some p tags with some information about yours truly. There is also a list of jobs I want to have. *@
+<p>
+    I hope that I can become a better developer by taking IS 413. I really enjoyed VBA in 201,
+    and I liked doing Python 403, but I didn't feel like I understood it very well. I hope that I can get good at
+    and also enjoy web development to potentially get a job in web dev later. The tricky part of 403 for me was the django stuff.
+    I didn't put as much time into it as I should have, so I'm excited and hopeful that the mechanics of creating a website
+    will be more intuitive and simple than Django.
+</p>
 
-    <h2>Grade calculator:</h2>
-    <form>
-        <label>Assignments (enter average grade received on assignments):</label>
-        <input id="txtAssignment" /><br />
-        <label>Group Project (enter grade received on group project):</label>
-        <input id="txtGroup" /><br />
-        <label>Quizzes (enter average grade received on quizzes):</label>
-        <input id="txtQuiz" /><br />
-        <label>Exams (enter average grade received on exams):</label>
-        <input id="txtExam" /><br />
-        <label>INTEX (enter grade received on INTEX):</label>
-        <input id="txtINTEX" /><br />
-        <input id="calc" type="button" value="Calculate" />
-    </form>
-
-    <script src="lib/jquery/jquery-3.6.0.min.js"></script>
-    <script src="js/gradeCalc.js"></script>
-
-</body>
-</html>
+<p>My top 3 jobs I would like to pursue after college:</p>
+<ul>
+    <li>Software Engineer</li>
+    <li>Cyber Security Engineer</li>
+    <li>Data Analyst</li>
+</ul>

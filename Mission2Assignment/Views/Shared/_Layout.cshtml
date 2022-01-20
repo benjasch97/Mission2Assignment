@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    @* This is the layout page that contains the shared formatting between all of the view pages of our app.
+        This section below in particular contains the shared elements in the head of each page view.*@
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link rel="icon" href="~/img/Profile Picture.ico" />
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/default.css" rel="stylesheet" />
+</head>
+<body>
+    @* Here is our nav bar for each of our pages. *@
+    <nav>
+        <a asp-controller="Main" asp-action="Index">Home</a>
+        <a asp-controller="Main" asp-action="GradeCalc">Grade Calculator</a>
+    </nav>
+
+    @* This code below means that on each page, they can put in code to display a custom value for the h1 tag. *@
+    <h1>@ViewData["Header"]</h1>
+
+    @* This code allows our GradeCalc form to run the javascript code we wrote previously. *@
+    <script src="~/lib/jquery/jquery-3.6.0.min.js"></script>
+
+    @* This is where the code that is unique to each page view is entered. *@
+    <div>
+        @RenderBody()
+    </div>
+
+
+</body>
+</html>

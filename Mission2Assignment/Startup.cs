@@ -24,11 +24,16 @@ namespace Mission2Assignment
         {
             
             
+            if (env.IsEnvironment("Development")) // this allows us to be able to get helpful error messages if we are in development
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            
             app.UseStaticFiles(); // this tells the system to use static files
 
-            app.UseRouting();
+            app.UseRouting(); // this enables us to use these endpoints, I think
 
-            app.UseEndpoints(endpoints =>
+            app.UseEndpoints(endpoints => // This directs the user to the index page upon startup
             {
                 endpoints.MapControllerRoute(
                     name: "default",
